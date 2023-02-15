@@ -19,12 +19,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-const Address = process.env.Database_ID;
-
 //Connect to a new database
 mongoose.set("strictQuery", true);
 //mongoose.connect("mongodb://127.0.0.1:27017/blogDB", {useNewUrlParser: true});
-mongoose.connect("mongodb+srv://"+ Address +"/blogDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Blogger:uhMXt5PmbqmG6k6Y@second-cluster.yn3evgp.mongodb.net/blogDB", {useNewUrlParser: true});
 
 //Create a new postSchema that contains a title and content.
 const postSchema = {
